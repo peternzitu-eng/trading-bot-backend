@@ -1,9 +1,9 @@
 services:
   - type: web
-      name: trading-bot-backend
-          env: node
-              buildCommand: npm install
-                  startCommand: npm start
-                      envVars:
-                            - key: NODE_VERSION
-                                    value: 18.17.0
+    name: trading-bot-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
