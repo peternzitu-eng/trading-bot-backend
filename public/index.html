@@ -1,5 +1,67 @@
-<!DOCTYPE html><html><head><title>Dashboard</title><link rel="stylesheet" href="style.css"></head><body>
-  <header><div>Logo</div><div id="sentiment-ticker"></div><div id="trading-mode"></div></header>
-<main><section id="signals-table"><table><thead><tr><th>Symbol</th><th>Action</th><th>Price</th></tr></thead><tbody></tbody></table></section>section></main>
-<script src="app.js"></script></body></html></tbody></th></th></tr></thead></table></main></div></header>
-</body></title></head></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Bot Dashboard - Unified 3-Step</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🚀 TradingBot Pro</div>
+        <div id="sentiment-ticker" class="ticker">
+            Loading market sentiment...
+        </div>
+        <div id="trading-mode" class="mode-badge Simulation">Simulation</div>
+    </header>
+
+    <main>
+        <div class="dashboard-grid">
+            <!-- Left: Signals & History -->
+            <section id="signals-section">
+                <h2>Live Signals & History</h2>
+                <div id="signals-table-container">
+                    <table id="signals-table">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Symbol</th>
+                                <th>Action</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Signals will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Right: AI Chat & Insights -->
+            <aside id="ai-chat-section">
+                <h2>AI Trading Assistant</h2>
+                <div id="chat-messages" class="chat-container">
+                    <div class="message system">Welcome! Ask me anything about the current market sentiment or your active signals.</div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Ask the AI assistant...">
+                    <button id="send-chat">Send</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Deep-Dive Modal (Chart) -->
+        <div id="chart-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="chart-container">
+                    <div class="placeholder-chart">Generating Signal Chart...</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+          </html>
